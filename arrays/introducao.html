@@ -9,12 +9,18 @@
   <h1>Arrays</h1>
 
   <script>
-    const nomes = ['Ana', 'Bia', 'Carlos', 'Daniel', 'Elisa']; // Forma literal
-    const nomes2 = new Array('Ana', 'Bia', 'Carlos'); // Usando o construtor
+    const nomes = ['Ana', 'Bia', 'Carlos', 'Daniel', 'Elisa', 'Fernando']; // Forma literal
+    const nomes2 = new Array('Ana', 'Bia', 'Carlos'); // Usando a função construtora
+
+    const nome = prompt("Digite um nome:");
+    nomes.push(nome); // Adiciona o nome ao final do array
 
     for (let i = 0; i < nomes.length; i++) {
       document.write("Nome: " + nomes[i] + "<br>");
     }
+
+    document.write("<br>Quantidade de nomes: " + nomes.length);
+
   </script>
 </body>
 </html>
