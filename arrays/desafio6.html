@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio 6</title>
+</head>
+<body>
+  <h1>Desafio 6</h1>
+
+  <script>
+    const arr = [6, '9', 9, 12, 'Jose', 15, true, 18, NaN, 21, {nome: 'Fernando'}, 24, 27, 30];
+    let encontrado = false;
+    
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] === null || arr[i] === undefined || isNaN(arr[i])) {
+        encontrado = true;
+        break;
+      }
+    }
+
+    alert('Encontrou null, undefined ou NaN? ' + encontrado);
+
+  </script>
+</body>
+</html>
