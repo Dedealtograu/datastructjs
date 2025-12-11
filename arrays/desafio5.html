@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio 5</title>
+</head>
+<body>
+  <h1>Desafio 5</h1>
+
+  <script>
+    const numeros = [5, 15, 25, 35, 45, 55, 65, 75, 85, 95, 7]; 
+    let sumaImpares = 0;
+
+    for (let i = 0; i < numeros.length; i++) {
+      if (numeros[i] % 2 !== 0) {
+        sumaImpares += numeros[i];
+      }
+    }
+
+    alert(`A soma dos números impares é: ${sumaImpares}`);
+
+  </script>
+</body>
+</html>
