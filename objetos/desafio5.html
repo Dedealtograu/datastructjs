@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objetos</title>
+</head>
+<body>
+  <h1>Desafio 5</h1>
+
+  <script>
+    const endereco = {
+      rua: 'Rua A',
+      numero: 100,
+    }
+
+    const pessoa = {
+      nome: 'João',
+      sobrenome: 'Silva',
+      endereco
+    }
+
+    for (let prop in pessoa) {
+      document.write(`${prop}: ${pessoa[prop]}<br>`);
+    }
+    
+  </script>
+</body>
+</html>
