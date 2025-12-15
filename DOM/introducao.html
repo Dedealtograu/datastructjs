@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dom</title>
+</head>
+<body>
+  <h1 id="title">Introdução</h1>
+  <p id="paragrafo">Este é um parágrafo com um <i>texto em itálico qualquer</i></p>
+
+  <hr>
+
+  <input type="text" id="user" value="Valor preenchido">
+
+  <hr>
+
+  <h2>Lista de tarefas</h2>
+  <ul id="taskList">
+    <li>Tarefa 1</li>
+    <li>Tarefa 2</li>
+    <li>Tarefa 3</li>
+    <li>Tarefa 4</li>
+  </ul>
+
+  <script>
+    const title = document.getElementById('title');
+    const paragrafo = document.getElementById('paragrafo');
+    const user = document.getElementById('user');
+    const taskList = document.getElementById('taskList');
+
+    let newTask = "Tarefa 5";
+
+    taskList.innerHTML += `<li>${newTask}</li>`;
+
+  </script>
+</body>
+</html>
