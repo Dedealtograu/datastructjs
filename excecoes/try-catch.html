@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exceções</title>
+</head>
+<body>
+  <h1>try...catch(erroor)</h1>
+
+  <div id="output"></div>
+
+  <script>
+    let = obj = { nome: "Roberto", email: "X5r3y@example.com" };
+
+    // obj = null;
+    
+    try {
+      document.getElementById("output").innerHTML = `Nome: ${obj.nome} - Email: ${obj.email}`;
+    } catch (error) {
+      alert("Ocorreu um erro ao tentar acessar as propriedades do objeto.");
+    } finally {
+      // alert("Programa continua executando normalmente após o bloco try...catch.");
+    }
+
+  </script>
+
+  <script src="areas.js"></script>
+
+  <script>
+    
+    try {
+      console.log(calcularAreaRetangulo(5, 8));
+    } catch (error) {
+      console.error("Erro ao calcular a área:", error.message);
+    }
+
+    try {
+      let area = calculaTriangulo(7, 10);
+      document.getElementById("output").innerHTML += `<br>Área do triângulo: ${area}`;
+    } catch (error) {
+      console.error("Erro ao calcular a área:", error.message);
+    }
+
+    try {
+      let area = calcularAreaCirculo(60);
+      document.getElementById("output").innerHTML += `<br>Área do círculo: ${area}`;
+    } catch (error) {
+      console.error("Erro ao calcular a área:", error.message);
+    }
+
+    alert("Fim do Programa.");
+
+  </script>
+</body>
+</html>
