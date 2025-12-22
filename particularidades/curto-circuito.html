@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Particularidades JS</title>
+</head>
+<body>
+  <h1>Curto-circuito</h1>
+
+  <p>Em JavaScript, o curto-circuito ocorre quando operadores lógicos avaliam expressões de forma que a segunda expressão não é avaliada se a primeira já determina o resultado final.</p>
+  <p>Os operadores lógicos que suportam curto-circuito são:</p>
+  <ul>
+    <li>Operador AND (&&)</li>
+    <li>Operador OR (||)</li>
+  </ul>
+  <p>Os operadores lógicos que não suportam curto-circuito são:</p>
+  <ul>
+    <li>Operador de negação (!)</li>
+    <li>Operador de negação lógica (!=)</li>
+  </ul>
+
+  <script>
+    function teste(param) {
+      param = param || 10; // Usando operador OR com curto-circuito
+
+      document.write("Valor de param: " + param + "<br>");
+    }
+
+    teste(5);  // Valor de param: 5
+    teste(0);  // Valor de param: 10
+  </script>
+</body>
+</html>

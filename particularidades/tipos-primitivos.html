@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Particularidades JS</title>
+</head>
+<body>
+  <h1>Tipos primitivos</h1>
+
+  <p>Em Javascritp, há dois tipos de dados possíveis: primitivos (passados por valor) e objetos (passados por referência).</p>
+  <p>Os tipos primitivos são:</p> 
+  <ul>
+    <li>String</li>
+    <li>Number</li>
+    <li>Boolean</li>
+    <li>Undefined</li>
+    <li>Null</li>
+    <li>Symbol (ES2015)</li>
+    <li>BigInt (ES2020)</li>
+  </ul>
+  <p>Os tipos primitivos podem ser usados para armazenar dados simples e primitivos.</p>
+
+  <script>
+    let num = 10;
+
+    function incrementar(valor) {
+      console.log("Valor interno:", ++valor);
+    }
+
+    incrementar(num); // Passagem por valor
+
+    console.log("Valor externo:", num); // Valor externo: 10
+
+    const arr = [1, 2, 3]; // endereço de memória 0x123
+    const arr2 = ['a', 'b', 'c']; // endereço de memória 0x456
+
+    function adicionarElemento(valor, array) {
+      array[array.length] = valor;
+    }
+
+    // adicionarElemento(4, 0x123); 
+    adicionarElemento(4, arr); // Passagem por referência
+
+    console.log(arr); // Array externo: [1, 2, 3, 4]
+
+    const obj = { nome: "João" }; // endereço de memória 0x789
+
+    function adicionarPropriedade(propriedade, valor, objeto) {
+      objeto[propriedade] = valor;
+    }
+
+    adicionarPropriedade("idade", 30, obj); // Passagem por referência
+
+    console.log(obj); // Objeto externo: { nome: 'João', idade: 30 }
+    
+  </script>
+</body>
+</html>
